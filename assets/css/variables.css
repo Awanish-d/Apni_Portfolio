@@ -1,0 +1,82 @@
+/* ===========================================
+   Google Fonts
+=========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* ===========================================
+   CSS VARIABLES
+=========================================== */
+
+:root{
+
+    /*========== Colors ==========*/
+
+    --primary-color:#3B82F6;
+    --primary-hover:#60A5FA;
+
+    --background-color:#0B1120;
+    --card-color:#111827;
+
+    --text-color:#F8FAFC;
+    --text-light:#94A3B8;
+
+    --border-color:#1E293B;
+
+    --success-color:#22C55E;
+    --danger-color:#EF4444;
+
+
+    /*========== Fonts ==========*/
+
+    --heading-font:'Poppins', sans-serif;
+    --body-font:'Inter', sans-serif;
+
+
+    /*========== Font Sizes ==========*/
+
+    --h1-size:4rem;
+    --h2-size:2.8rem;
+    --h3-size:2rem;
+
+    --large-text:1.25rem;
+    --normal-text:1rem;
+    --small-text:.9rem;
+
+
+    /*========== Font Weight ==========*/
+
+    --fw-light:300;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --fw-extra-bold:800;
+
+
+    /*========== Spacing ==========*/
+
+    --section-padding:100px;
+    --container-width:1200px;
+
+
+    /*========== Border Radius ==========*/
+
+    --radius-sm:8px;
+    --radius-md:12px;
+    --radius-lg:20px;
+    --radius-xl:30px;
+    --radius-round:50%;
+
+
+    /*========== Shadows ==========*/
+
+    --shadow:
+    0 10px 30px rgba(0,0,0,.30);
+
+
+    /*========== Transition ==========*/
+
+    --transition:.35s ease;
+
+}
