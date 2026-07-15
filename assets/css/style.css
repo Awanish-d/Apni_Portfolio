@@ -172,28 +172,54 @@ section{
     gap: 1rem;
 
 }
+/* ===========================================
+        THEME TOGGLE
+=========================================== */
+
 .theme-toggle{
 
-    width: 45px;
+    width:45px;
 
-    height: 45px;
+    height:45px;
 
-    border-radius: 50%;
+    border:none;
 
-    background: var(--card-color);
+    border-radius:50%;
 
-    color: var(--text-color);
+    display:flex;
 
-    border: 1px solid var(--border-color);
+    justify-content:center;
 
-    transition: var(--transition);
+    align-items:center;
+
+    background:var(--card-color);
+
+    color:var(--text-color);
+
+    cursor:pointer;
+
+    transition:var(--transition);
 
 }
+
 .theme-toggle:hover{
 
-    background: var(--primary-color);
+    background:var(--primary-color);
+
+    color:#fff;
+
+    transform:rotate(20deg) scale(1.08);
 
 }
+
+.theme-toggle svg{
+
+    width:20px;
+
+    height:20px;
+
+}
+
 .resume-btn{
 
     background:var(--primary-color);
@@ -214,21 +240,6 @@ section{
     background:var(--primary-hover);
 
     transform:translateY(-3px);
-
-}
-.theme-toggle{
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
 
 }
 /* ==========================

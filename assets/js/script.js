@@ -110,3 +110,40 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+/* ===========================================
+            THEME SWITCH
+=========================================== */
+
+const themeToggle = document.getElementById("theme-toggle");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+
+    document.body.classList.add("light-theme");
+
+    themeToggle.innerHTML = `<i data-lucide="sun"></i>`;
+
+} else {
+
+    themeToggle.innerHTML = `<i data-lucide="moon"></i>`;
+
+}
+
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-theme");
+
+    const isLight = document.body.classList.contains("light-theme");
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    themeToggle.innerHTML = isLight
+        ? `<i data-lucide="sun"></i>`
+        : `<i data-lucide="moon"></i>`;
+
+    lucide.createIcons();
+
+});

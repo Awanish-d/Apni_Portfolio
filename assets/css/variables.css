@@ -80,3 +80,23 @@
     --transition:.35s ease;
 
 }
+/* ===========================================
+        LIGHT THEME
+=========================================== */
+
+body.light-theme{
+
+    --background-color:#F8FAFC;
+
+    --card-color:#FFFFFF;
+
+    --text-color:#111827;
+
+    --text-light:#475569;
+
+    --border-color:#CBD5E1;
+
+    --shadow:
+    0 10px 30px rgba(15,23,42,.08);
+
+}
