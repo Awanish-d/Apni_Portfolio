@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <div class="scroll-progress"></div>
 
     <!-- ==========================
             HEADER
@@ -65,6 +66,9 @@
                     </a>
 
                 </div>
+                <button class="menu-toggle" aria-label="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
 
             </div>
 
@@ -84,7 +88,7 @@
         HERO SECTION
 =========================== -->
 
-<section class="hero">
+<section class="hero reveal">
 
     <div class="container">
 
@@ -144,7 +148,7 @@
         ABOUT SECTION
 =========================== -->
 
-<section class="about" id="about">
+<section class="about reveal" id="about">
 
     <div class="container">
 
@@ -266,7 +270,7 @@
         SKILLS SECTION
 ========================== -->
 
-<section class="skills section" id="skills">
+<section class="skills section reveal" id="skills">
 
     <div class="container">
 
@@ -401,7 +405,7 @@
         EXPERIENCE SECTION
 ========================== -->
 
-<section class="experience section" id="experience">
+<section class="experience section reveal" id="experience">
 
     <div class="container">
 
@@ -544,7 +548,7 @@
         PROJECTS SECTION
 ========================== -->
 
-<section class="projects section" id="projects">
+<section class="projects section reveal" id="projects">
 
     <div class="container">
 
@@ -724,7 +728,7 @@
         CONTACT SECTION
 ========================== -->
 
-<section class="contact section" id="contact">
+<section class="contact section reveal" id="contact">
 
     <div class="container">
 
@@ -805,62 +809,90 @@
             </div>
 
             <!-- Contact Form -->
+       <form id="contact-form" class="contact-form">
 
-            <form class="contact-form">
+    <div class="input-group">
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                >
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+        >
 
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                >
+        <small class="error"></small>
 
-                <input
-                    type="text"
-                    placeholder="Subject"
-                    required
-                >
+    </div>
 
-                <textarea
-                    rows="6"
-                    placeholder="Write your message..."
-                    required
-                ></textarea>
+    <div class="input-group">
 
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                >
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+        >
 
-                    <i data-lucide="send"></i>
+        <small class="error"></small>
 
-                    Send Message
+    </div>
 
-                </button>
+    <div class="input-group">
 
-            </form>
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+        >
 
+        <small class="error"></small>
+
+    </div>
+
+    <div class="input-group">
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message..."
+        ></textarea>
+
+        <small class="error"></small>
+
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-primary"
+        id="submit-btn"
+    >
+
+        <i data-lucide="send"></i>
+
+        <span>Send Message</span>
+
+    </button>
+
+</form>
         </div>
 
     </div>
 
 </section>
     </main>
+    <button class="back-to-top">
 
-    <!-- ==========================
-            FOOTER
-    =========================== -->
+    <i data-lucide="arrow-up"></i>
+
+</button>
 
    <!-- ==========================
         FOOTER
 ========================== -->
 
-<footer class="footer">
+<footer class="footer reveal">
 
     <div class="container">
 
@@ -929,6 +961,17 @@
     </div>
 
 </footer>
+<!-- ==========================
+        TOAST NOTIFICATION
+========================== -->
+
+<div id="toast" class="toast">
+
+    <i data-lucide="check-circle"></i>
+
+    <span id="toast-message"></span>
+
+</div>
 
     <!-- JavaScript -->
 
@@ -937,6 +980,13 @@
     <script src="assets/js/animations.js"></script>
 
     <script src="assets/js/typing.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    emailjs.init({
+        publicKey: "q--WgLYsbXGqzGoJW"
+    });
+</script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
     <script>
     lucide.createIcons();
