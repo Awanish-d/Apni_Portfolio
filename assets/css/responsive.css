@@ -1,0 +1,200 @@
+/* ========================================================== RESPONSIVE
+CSS TEMPLATE Replace and customize according to your project.
+========================================================== */
+
+/* ========================== Large Laptop ========================== */
+@media (max-width:1200px){
+
+    .container{
+        width:92%;
+    }
+
+    .hero-wrapper,
+    .about-wrapper{
+        gap:3rem;
+    }
+
+}
+
+/* ========================== Tablet ========================== */
+@media (max-width:992px){
+
+    /* Navbar */
+    .nav-actions{
+        display:none;
+    }
+
+    /* Hero */
+    .hero-wrapper{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-description{
+        max-width:650px;
+    }
+
+    .hero-image img{
+        max-width:420px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    /* About */
+    .about-wrapper{
+        flex-direction:column;
+        text-align:center;
+        gap:3rem;
+    }
+
+    .about-image img{
+        max-width:350px;
+    }
+
+    .about-info{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Skills */
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Experience */
+    .experience-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    /* Projects */
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Contact */
+    .contact-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ========================== Mobile ========================== */
+@media (max-width:768px){
+
+    /* Navbar */
+    .menu-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:80px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh - 80px);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:2rem;
+        background:rgba(11,17,32,.97);
+        backdrop-filter:blur(12px);
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        left:0;
+    }
+
+    .nav-links a{
+        font-size:1.3rem;
+    }
+
+    /* Hero */
+    .hero-title{
+        font-size:3.2rem;
+    }
+
+    .hero-role{
+        font-size:1.45rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    /* About */
+    .about-info{
+        grid-template-columns:1fr;
+    }
+
+    /* Projects */
+    .project-buttons{
+        flex-direction:column;
+    }
+
+    /* Contact */
+    .contact-form button{
+        width:100%;
+    }
+
+}
+
+/* ========================== Small Mobile ========================== */
+@media (max-width:576px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .section-title{
+        margin-bottom:3rem;
+    }
+
+    .hero-title{
+        font-size:2.7rem;
+    }
+
+    .hero-description{
+        font-size:1rem;
+    }
+
+    .hero-image img{
+        max-width:320px;
+    }
+
+    .project-image{
+        height:100px;
+    }
+
+    .contact-info h3{
+        font-size:1.7rem;
+    }
+
+}
+
+/* ========================== Tiny Mobile ========================== */
+@media (max-width:400px){
+
+    .hero-title{
+        font-size:2.3rem;
+    }
+
+    .hero-role{
+        font-size:1.2rem;
+    }
+
+}

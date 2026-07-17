@@ -8,15 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!-- Primary Meta Tags -->
-<title>Awanish Dohare | Frontend Developer Portfolio</title>
+<title>
+Awanish Dohare | Web Developer & UI Designer
+</title>
 
 <meta name="title" content="Awanish Dohare | Frontend Developer Portfolio">
 
-<meta name="description"
-      content="Portfolio of Awanish Dohare, Frontend Developer skilled in HTML, CSS, JavaScript, PHP and MySQL. Explore projects, experience and contact information.">
+<meta
+name="description"
+content="Awanish Dohare is a Frontend Web Developer specializing in responsive websites, modern UI design, JavaScript applications and interactive web experiences. Explore projects, skills and professional experience."
+>
 
-<meta name="keywords"
-      content="Awanish Dohare, Frontend Developer, Web Developer, HTML, CSS, JavaScript, PHP, MySQL, Portfolio">
+<meta
+name="keywords"
+content="Awanish Dohare, Web Developer, Frontend Developer, JavaScript Developer, HTML CSS, PHP Developer, MySQL, UI Designer, Portfolio, Raipur Developer"
+>
 
 <meta name="author"
       content="Awanish Dohare">
@@ -26,6 +32,7 @@
 
 <meta name="theme-color"
       content="#2563eb">
+      <meta name="color-scheme" content="dark light">
       <!-- Open Graph -->
 
 <meta property="og:type" content="website">
@@ -52,24 +59,87 @@
 
 <meta name="twitter:image"
       content="assets/images/preview.png">
-
+<meta name="application-name"
+content="Awanish Portfolio">
+<meta
+name="generator"
+content="Handcrafted with HTML, CSS & JavaScript">
+<meta
+name="referrer"
+content="strict-origin-when-cross-origin">
 
     <!-- CSS -->
+
      <link rel="canonical"
       href="https://YOUR_DOMAIN_HERE">
       <link rel="icon"
       type="image/png"
       href="assets/images/favicon.png">
+      <link rel="icon" href="assets/images/favicon.ico">
+
+<link
+rel="icon"
+type="image/png"
+sizes="32x32"
+href="assets/images/favicon-32x32.png">
+
+<link
+rel="apple-touch-icon"
+href="assets/images/apple-touch-icon.png">
+
 
     <link rel="stylesheet" href="assets/css/variables.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link
+    rel="preload"
+    as="image"
+    href="assets/images/developer.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
 </head>
 
 <body>
+    <!-- ==========================
+        PAGE LOADER
+========================== -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="loader-logo">
+
+            AV
+
+        </div>
+
+        <h2>
+
+            Awanish Dohare
+
+        </h2>
+
+        <p>
+
+            Loading Portfolio...
+
+        </p>
+
+        <div class="loader-bar">
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+</div>
     <div class="scroll-progress"></div>
 
     <!-- ==========================
@@ -82,7 +152,7 @@
 
             <div class="nav-wrapper">
 
-                <a href="#" class="logo">
+                <a href="#" class="logo" aria-label="Homepage">
                     <span>A</span>wanish
                 </a>
                 <ul class="nav-links">
@@ -100,8 +170,7 @@
                 </ul>
 
                 <div class="nav-actions">
-
-                    <button
+                    <button 
     class="theme-toggle"
     id="theme-toggle"
     aria-label="Toggle Theme"
@@ -111,13 +180,14 @@
 
 </button>
 
-                    <a href="assets/files/Resume.pdf"
-                       class="resume-btn"
-                       download>
-
-                        Resume
-
-                    </a>
+                    <a
+    href="assets/files/Resume.pdf"
+    class="resume-btn"
+    download="Resume.pdf"
+    aria-label="Download Resume"
+>
+    Resume
+</a>
 
                 </div>
                 <button class="menu-toggle" aria-label="Open Menu">
@@ -169,12 +239,17 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="assets/files/Resume.pdf" class="btn btn-primary"download>
-                        <i data-lucide="download"></i>Download Resume
-                        
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                       <i data-lucide="send"></i> Contact Me
+                    <a
+    href="assets/files/Resume.pdf"
+    class="btn btn-primary"
+    download="Resume.pdf"
+    aria-label="Download Resume"
+>
+    <i data-lucide="download"></i>
+    Download Resume
+</a>
+                    <a href="#contact" class="btn btn-secondary" aria-label="Contact Me">
+                        <i data-lucide="send"></i> Contact Me
                         
                     </a>
                 </div>
@@ -185,10 +260,10 @@
             </div>
         </div>
         <div class="social-icons">
-                <a href="https://github.com/Awanish-d" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/Awanish-d" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i data-lucide="github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/awanishdohare/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/awanishdohare/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <i data-lucide="linkedin"></i>
                 </a>
                 <a href="mailto:awanish31av@gmail.com" aria-label="Email">
@@ -229,7 +304,8 @@
             <div class="about-image">
 
                 <img src="assets/images/developer.svg"
-                     alt="Awanish Dohare">
+                     alt="Awanish Dohare" loading="lazy"
+decoding="async">
 
             </div>
 
@@ -624,12 +700,18 @@
                     Project 1
             =========================== -->
 
-            <article class="project-card featured">
+            <article class="project-card featured"
+         data-project="traffic-system">
 
                 <div class="project-image">
 
-                    <img src="assets/images/projects/placeholder.jpg"
-                         alt="Traffic Management System">
+                    <img
+    src="assets/images/projects/traffic-management.jpg"
+    alt="Traffic Management System"
+    loading="lazy"
+    decoding="async"
+    onerror="this.src='assets/images/developer.svg'">
+                         <div class="project-overlay"></div>
 
                     <span class="project-badge">
 
@@ -670,7 +752,7 @@
                     <div class="project-buttons">
 
                         <a href="https://github.com/Awanish-d/Traffic_Management_System"
-                           target="_blank"
+                           target="_blank" rel="noopener noreferrer"
                            class="btn btn-secondary">
 
                             <i data-lucide="github"></i>
@@ -680,7 +762,7 @@
                         </a>
 
                         <a href="http://tmsawanish.infinityfreeapp.com"
-                           target="_blank"
+                           target="_blank" rel="noopener noreferrer"
                            class="btn btn-primary">
 
                             <i data-lucide="external-link"></i>
@@ -778,7 +860,7 @@
     </div>
 
 </section>
-<!-- ==========================
+ <!--=================
         CONTACT SECTION
 ========================== -->
 
@@ -826,7 +908,9 @@
 
                         <h4>Email</h4>
 
-                        <span>awanish31av@gmail.com</span>
+                        <a href="mailto:awanish31av@gmail.com">
+    awanish31av@gmail.com
+</a>
 
                     </div>
 
@@ -854,8 +938,15 @@
 
                         <h4>GitHub</h4>
 
-                        <span>github.com/Awanish-d</span>
-
+                        
+<a
+    href="https://github.com/Awanish-d"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub Profile"
+>
+    github.com/Awanish-d
+</a>
                     </div>
 
                 </div>
@@ -866,12 +957,16 @@
        <form id="contact-form" class="contact-form">
 
     <div class="input-group">
-
+<label for="name">
+Name
+</label>
         <input
             type="text"
             id="name"
             name="name"
             placeholder="Your Name"
+            autocomplete="name"
+            required = "required"
         >
 
         <small class="error"></small>
@@ -879,12 +974,18 @@
     </div>
 
     <div class="input-group">
+
+        <label for="email">
+            Email
+        </label>
 
         <input
             type="email"
             id="email"
             name="email"
             placeholder="Your Email"
+            required = "required"
+            autocomplete="email"
         >
 
         <small class="error"></small>
@@ -892,6 +993,9 @@
     </div>
 
     <div class="input-group">
+        <label for="subject">
+            Subject
+        </label>
 
         <input
             type="text"
@@ -905,6 +1009,9 @@
     </div>
 
     <div class="input-group">
+        <label for="message">
+            Message
+        </label>
 
         <textarea
             id="message"
@@ -936,7 +1043,7 @@
 
 </section>
     </main>
-    <button class="back-to-top">
+    <button class="back-to-top" aria-label="Back to Top">
 
     <i data-lucide="arrow-up"></i>
 
@@ -952,9 +1059,9 @@
 
         <div class="footer-content">
 
-            <a href="#" class="footer-logo">
+            <a href="#" class="footer-logo" aria-label="Back to Home">
 
-                AD
+                AV
 
             </a>
 
@@ -973,24 +1080,26 @@
             <div class="footer-social">
 
                 <a href="https://github.com/Awanish-d"
-                   target="_blank">
+                   target="_blank" aria-label="GitHub Profile"
+rel="noopener noreferrer">
 
                     <i data-lucide="github"></i>
 
                 </a>
 
-                <a href="mailto:awanish31av@gmail.com">
+                <a href="mailto:awanish31av@gmail.com" aria-label="Send Email">
 
                     <i data-lucide="mail"></i>
 
                 </a>
 
-                <a href="assets/files/Resume.pdf"
-                   download>
-
-                    <i data-lucide="file-text"></i>
-
-                </a>
+                <a
+    href="assets/files/Resume.pdf"
+    download="Resume.pdf"
+    aria-label="Download Resume"
+>
+    <i data-lucide="file-text"></i>
+</a>
 
             </div>
 

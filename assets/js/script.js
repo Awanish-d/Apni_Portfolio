@@ -147,3 +147,29 @@ themeToggle.addEventListener("click", () => {
     lucide.createIcons();
 
 });
+
+/* ===========================================
+            PAGE LOADER
+=========================================== */
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    if (!loader) return;
+
+    requestAnimationFrame(() => {
+
+        loader.classList.add("hide");
+
+        document.body.style.overflow = "";
+
+        setTimeout(() => {
+
+            loader.remove();
+
+        }, 600);
+
+    });
+
+}); 

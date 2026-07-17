@@ -122,7 +122,39 @@ function validateForm() {
     return valid;
 
 }
+Object.values(fields).forEach((field) => {
 
+    field.addEventListener("input", () => {
+
+        if (field.value.trim() !== "") {
+
+            if (field === fields.email) {
+
+                if (isValidEmail(field.value.trim())) {
+                    setSuccess(field);
+                }
+
+            } else if (
+                field === fields.message &&
+                field.value.trim().length >= 15
+            ) {
+
+                setSuccess(field);
+
+            } else if (
+                field !== fields.email &&
+                field !== fields.message
+            ) {
+
+                setSuccess(field);
+
+            }
+
+        }
+
+    });
+
+});
 form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
@@ -154,14 +186,12 @@ form.addEventListener("submit", async (e) => {
 
             {
 
-                name: fields.name.value,
+                name: fields.name.value.trim(),
 
-                email: fields.email.value,
+                email: fields.email.value.trim(),
 
-                subject: fields.subject.value,
-
-                message: fields.message.value
-
+                subject: fields.subject.value.trim(),
+message: fields.message.value.trim(),
             }
 
         );
@@ -184,7 +214,10 @@ form.addEventListener("submit", async (e) => {
 
         console.error(error);
 
-        showToast("Failed to send message","error");
+        showToast(
+    "Unable to send your message. Please try again in a moment.",
+    "error"
+);
 
     }
 
