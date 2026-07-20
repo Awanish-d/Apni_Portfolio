@@ -172,51 +172,121 @@ section{
     gap: 1rem;
 
 }
-/* ===========================================
+/* ==============================
         THEME TOGGLE
-=========================================== */
+============================== */
 
-.theme-toggle{
+.theme-toggle {
+    width: 48px;
+    height: 48px;
 
-    width:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    height:45px;
+    position: relative;
 
-    border:none;
+    border: none;
+    border-radius: 50%;
 
-    border-radius:50%;
+    cursor: pointer;
 
-    display:flex;
+    background: var(--surface-color);
+    color: var(--text-color);
 
-    justify-content:center;
-
-    align-items:center;
-
-    background:var(--card-color);
-
-    color:var(--text-color);
-
-    cursor:pointer;
-
-    transition:var(--transition);
-
+    transition:
+        background .35s ease,
+        transform .25s ease,
+        box-shadow .35s ease;
 }
 
-.theme-toggle:hover{
-
-    background:var(--primary-color);
-
-    color:#fff;
-
-    transform:rotate(20deg) scale(1.08);
-
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(59,130,246,.18);
 }
 
-.theme-toggle svg{
+.theme-toggle:active {
+    transform: scale(.92);
+}
 
-    width:20px;
+.icon-wrapper {
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
 
-    height:20px;
+.icon-wrapper svg {
+    position: absolute;
+    inset: 0;
+
+    width: 22px;
+    height: 22px;
+
+    transition:
+        transform .55s cubic-bezier(.22,1,.36,1),
+        opacity .4s ease;
+}
+
+/* ==============================
+        DARK MODE
+============================== */
+
+.moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.sun {
+    opacity: 0;
+    transform: rotate(-180deg) scale(.3);
+}
+
+/* ==============================
+        LIGHT MODE
+============================== */
+
+body.light-theme .moon {
+    opacity: 0;
+    transform: rotate(180deg) scale(.25);
+}
+
+body.light-theme .sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Glow */
+
+.theme-toggle::after {
+
+    content: "";
+
+    position: absolute;
+    inset: -6px;
+
+    border-radius: inherit;
+
+    background: radial-gradient(
+        rgba(59,130,246,.35),
+        transparent 70%
+    );
+
+    opacity: 0;
+
+    transform: scale(.8);
+
+    transition:
+        opacity .45s ease,
+        transform .45s ease;
+
+    pointer-events: none;
+}
+
+.theme-toggle:hover::after {
+
+    opacity: 1;
+
+    transform: scale(1);
 
 }
 
@@ -888,32 +958,26 @@ overflow: hidden;
 }
 
 .about-image{
-    flex: 1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .about-image img{
-
     width:100%;
+    max-width:420px;
+    height:auto;
+    object-fit:contain;
 
-    max-width:440px;
+    border-radius:24px;
 
-    margin:auto;
+    transition:.4s ease;
 
-    animation:float 4s ease-in-out infinite;
-
-    border-radius:28px;
-
-    transition:all .4s ease;
-
-    filter:drop-shadow(0 25px 45px rgba(59,130,246,.18));
-
+    filter:drop-shadow(0 20px 50px rgba(37,99,235,.25));
 }
+
 .about-image img:hover{
-
     transform:translateY(-8px) scale(1.02);
-
-    filter:drop-shadow(0 35px 60px rgba(59,130,246,.28));
-
 }
 .about-content{
     flex: 1;

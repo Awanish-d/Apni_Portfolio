@@ -2,8 +2,11 @@
 
                 [ Portfolio Banner ]
 
-        Awanish Dohare
-Frontend Developer | UI Designer
+                    Awanish D
+
+                Frontend Developer
+
+       Official Portfolio of Awanish Dohare
 
 Live Demo
 
